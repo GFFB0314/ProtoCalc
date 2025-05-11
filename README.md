@@ -184,4 +184,4 @@ For any questions, issues, or suggestions, please feel free to contact us at:
 
 **© 2025 Fares Gbetnkom**. This project is licensed under the **MIT License** — feel free to use, modify, and distribute it. See the full license text [here](LICENSE).
 
-Thanks for using ProtoCalc! 🧮 Happy calculating! 😊
+Thanks for using **ProtoCalc**! 🧮 Happy calculating! 😊
