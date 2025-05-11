@@ -14,6 +14,7 @@ Welcome to **ProtoCalc** – a sleek, touch-friendly calculator app built with [
   - [Building an Executable 🔧](#building-an-executable-)
   - [Contributing 🤝](#contributing-)
   - [Contact 📬](#contact-)
+  - [License 📜](#license-)
 
 ---
 
@@ -175,5 +176,12 @@ Please ensure that your code follows PEP 8 style guidelines and includes meaning
 For any questions, issues, or suggestions, please feel free to contact us at:
 - Email: gbetnkom.bechir@gmail.com
 - GitHub Issues: [Project Issues](https://github.com/GFFB0314/ProtoCalc/issues)
+  
+---
+
+## License 📜
+**MIT License** 📝
+
+**© 2025 Fares Gbetnkom**. This project is licensed under the **MIT License** — feel free to use, modify, and distribute it. See the full license text [here](LICENSE).
 
 Thanks for using ProtoCalc! 🧮 Happy calculating! 😊
