@@ -1,0 +1,202 @@
+<Button>:
+    size_hint: (0.3, 0.3)
+    background_color: (0.3, 0.4, 0.5, 1)
+    color: (.4, .6, .4, 1)
+
+
+<CalculatorLayout>:
+    BoxLayout:
+        orientation: "vertical" 
+        size: root.width, root.height # Set the size of the BoxLayout to match the parent
+
+        TextInput:
+            id: cal_input
+            text: ""
+            padding_y: [40, 10]
+            background_color: (0.7, 0.9, 1, 1)
+            foreground_color: (.4, .4, .4, 1)
+            halign: "right"
+            font_size: 55
+            disabled: True
+            input_filter: "float"
+            size_hint_y: None
+            height: self.minimum_height  # Dynamically adjust height
+
+
+        GridLayout:
+            cols: 4
+            rows: 7
+
+            # Rows
+            Button: 
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "C"
+                on_press: root.clear()
+
+
+            Button:
+                font_size: 32
+                text: "+/-"
+                on_press: root.pos_neg()
+
+            Button: 
+                id: clear
+                font_size: 32
+                text: "\u00AB"
+                on_press: root.remove()
+
+
+            Button: 
+                font_size: 32
+                text: "\u00F7"
+                on_press: root.operator_sign("\u00F7")
+
+
+
+            # Rows
+            Button: 
+                font_size: 32
+                text: "7"
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+                on_press: root.button_press(7)
+
+            Button:
+                font_size: 32
+                text: "8"
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+                on_press: root.button_press(8)
+
+            Button:
+                font_size: 32
+                text: "9"
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+                on_press: root.button_press(9)
+
+            Button:
+                font_size: 32
+                text: "\u00D7"
+                on_press: root.operator_sign("\u00D7")
+
+
+            # Rows
+            Button:
+                font_size: 32
+                text: "4"
+                on_press: root.button_press(4)
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "5"
+                on_press: root.button_press(5)
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "6"
+                on_press: root.button_press(6)
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "-"
+                on_press: root.operator_sign("-")
+
+
+            # Rows
+            Button:
+                font_size: 32
+                text: "1"
+                on_press: root.button_press(1)
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+            
+            Button:
+                font_size: 32
+                text: "2"
+                on_press: root.button_press(2)
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "3"
+                on_press: root.button_press(3)
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "+"
+                on_press: root.operator_sign("+")
+
+            # Rows
+            Button:
+                font_size: 32
+                text: "0"
+                on_press: root.button_press(0)
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "00"
+                on_press: root.button_press("00")
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+            
+
+            Button:
+                font_size: 32
+                text: "."
+                on_press: root.dot()
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "%"
+                on_press: root.percentage()
+
+            # Rows
+            Button:
+                font_size: 32
+                text: "sin()"
+                on_press: root.trig("sin")
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "cos()"
+                on_press: root.trig("cos")
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "tan()"
+                on_press: root.trig("tan")
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "e"
+                on_press: root.euler()    
+
+            # Rows
+            Button:
+                font_size: 32
+                text: "asin()"
+                on_press: root.trig("asin")
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "acos()"
+                on_press: root.trig("acos")
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "atan()"
+                on_press: root.trig("atan")
+                background_color: (157/255.0, 157/255.0, 157/255.0, 1)
+
+            Button:
+                font_size: 32
+                text: "="
+                on_press: root.calculate()       

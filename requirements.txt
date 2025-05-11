@@ -1,0 +1,7 @@
+kivy
+re
+math
+pylint
+mypy 
+black
+pytest
